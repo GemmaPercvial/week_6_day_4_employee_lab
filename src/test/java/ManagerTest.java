@@ -1,3 +1,4 @@
+import Employees.Manager;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class ManagerTest {
 
     @Before
     public void before(){
-       manager = new Manager("Mike", 988, 1000.00);
+       manager = new Manager("Mike", 988, 1000.00, "Menswear");
     }
 
     @Test
@@ -37,5 +38,10 @@ public class ManagerTest {
     @Test
     public void canPayBonus(){
         assertEquals(10.00, manager.payBonus(), 2);
+    }
+
+    @Test
+    public void canGetDepartmentName(){
+        assertEquals("Menswear", manager.getDepartmentName());
     }
 }
