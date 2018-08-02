@@ -1,4 +1,4 @@
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private int niNumber;
@@ -9,5 +9,17 @@ public class Employee {
         this.niNumber = niNumber;
         this.salary = salary;
 
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getNiNumber(){
+        return this.niNumber;
+    }
+
+    public int getSalary(){
+        return this.salary;
     }
 }
