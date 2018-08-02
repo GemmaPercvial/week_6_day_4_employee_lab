@@ -1,4 +1,4 @@
-import Employees.Manager;
+import Management.Manager;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -44,4 +44,25 @@ public class ManagerTest {
     public void canGetDepartmentName(){
         assertEquals("Menswear", manager.getDepartmentName());
     }
+
+    @Test
+    public void canRaiseSalaryNegativeAmount(){
+        manager.raiseSalary(-10);
+        assertEquals(1000.00, manager.getSalary(), 2);
+    }
+
+    @Test
+    public void canChangeName(){
+        manager.setName("Colin");
+        assertEquals("Colin", manager.getName());
+    }
+
+    @Test
+    public void cantChangeNameToNull(){
+        manager.setName(null);
+        assertEquals("Mike", manager.getName());
+    }
+
+
+
 }
